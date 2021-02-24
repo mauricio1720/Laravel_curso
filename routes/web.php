@@ -14,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/','welcome')->name('rutaBienvenida');
-Route::get('/glosario','glosarioController@index')->name('rutaGlosario');
-Route::get('/ayuda','ayudaController@index')->name('temas.index');
-/* Route::get('/ayuda/{id}','ayudaController@show')->name('ayuda.show'); */
-Route::get('/glosario/{id}','glosarioController@show')->name('glosario.show');
+Route::get('/glosario','glosarioController@index')->name('rutaGlosario.index');
+
+Route::post('/servicios','rutaserviciosController@store')->name('rutaservicios.store');
+Route::get('/servicios','rutaserviciosController@index')->name('rutaservicios.index');
+Route::get('/servicios/create','rutaserviciosController@create')->name('rutaservicios.create');
+Route::get('/servicios/{id}','rutaserviciosController@show')->name('rutaservicios.show');
+
+Route::get('/productos','rutaproductosController@index')->name('rutaproductos.index');
+

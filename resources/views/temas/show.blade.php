@@ -5,4 +5,5 @@
    <h2>{{$ayuda->nombre}}</h2>
    <p>{{$ayuda->descripcion}}</p>
    <p>{{$ayuda->updated_at->diffForHumans()}}</p>
+ 
 @endsection
